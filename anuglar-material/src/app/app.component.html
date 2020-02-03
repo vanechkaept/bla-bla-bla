@@ -1,23 +1,50 @@
 
 
 
+<div class="container">
 
-<mat-menu #appMenu>
+  <mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>home</mat-icon>
+      <h3 matLine>Heading</h3>
+      <p matLine> Line </p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon matListIcon>open_in_browser</mat-icon>
+      <h3 matLine>Heading 2</h3>
+      <p matLine> Line  2</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon matListIcon>add</mat-icon>
+      <h3 matLine>Heading 3</h3>
+      <p matLine> Line 3 </p>
+    </mat-list-item>
 
-  <button mat-menu-item [matMenuTriggerFor]="subMenu" >FrontEnd </button>
-  <button mat-menu-item [matMenuTriggerFor]="subMenuSecond">BackEnd </button>
-</mat-menu>
+  </mat-list>
 
-<button mat-flat-button [matMenuTriggerFor]="appMenu">
-  Menu
-</button>
+</div>
 
 
-<mat-menu #subMenu>
-  <button mat-menu-item>Angular</button>
-  <button mat-menu-item>React</button>
-  <button mat-menu-item>Vue</button>
-</mat-menu>
-<mat-menu #subMenuSecond>
-  <button mat-menu-item>Node</button>
-</mat-menu>
+
+<!-- <div>
+
+  <mat-list>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-list-item>Item 3</mat-list-item>
+
+  </mat-list>
+
+
+  <mat-nav-list>
+    <a mat-list-item href="#"> Home </a>
+    <a mat-list-item href="#"> About </a>
+    <a mat-list-item href="#"> Services </a>
+  </mat-nav-list>
+
+
+</div> -->
+
+
