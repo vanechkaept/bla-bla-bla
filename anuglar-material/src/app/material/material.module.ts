@@ -6,6 +6,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -17,6 +18,7 @@ const MaterialCoponents = [
   MatIconModule,
   MatBadgeModule,
   MatProgressSpinnerModule,
+  MatToolbarModule,
 
 
 ];

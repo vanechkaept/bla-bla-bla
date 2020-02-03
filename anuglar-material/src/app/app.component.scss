@@ -1,13 +1,27 @@
-button{
-  margin: 2rem;
+
+
+
+
+
+
+.navbar{
+  justify-content: space-between;
+  line-height: 65px;
 }
 
 
+span{
+  padding-right: 1rem;
+}
 
 
+.icon-new{
+  vertical-align: middle;
 
-.input__button{
-  margin: 0px;
+  &.general{
+    font-size: 2.7rem;
+    // margin-top: 10px;
+  }
 }
 
 
