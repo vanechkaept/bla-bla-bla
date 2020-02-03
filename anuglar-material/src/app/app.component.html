@@ -1,9 +1,21 @@
+
+
 <div>
-
-
-  <i class="material-icons" fontSet='red'>10k</i>
-
+  <button (click)="this.notif= this.notif + 1 " matBadge="{{notif}}" matBadgeColor="accent">
+    ddd
+  </button>
 </div>
 
-<mat-icon color='primary'> card_travel</mat-icon>
-<p color="warn"> d s d s d</p>
+<div>
+  <button (click)="this.notif= this.notif + 1 " matBadge="{{notif}}" matBadgePosition=" below before" matBadgeOverlap='false' matBadgeColor="primary" matBadgeSize="large">
+    ddd
+  </button>
+</div>
+
+<div>
+  <button (click)="this.notif= this.notif + 1 " [matBadge]="notif" [matBadgeHidden]="notif === 0" matBadgePosition=" above before" matBadgeColor="warn"  matBadgeSize="small">
+    ddd
+  </button>
+</div>
+
+

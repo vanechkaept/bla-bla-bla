@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
   todo: boolean;
   inputText = 'this new ';
 
+  notif = 0;
+
 
   form = new FormGroup({
     emailFormControl : new FormControl({value: '', disabled: false},
