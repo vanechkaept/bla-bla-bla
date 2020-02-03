@@ -25,6 +25,24 @@ span{
 }
 
 
+mat-sidenav-container{
+  height: 100%;
+}
+
+
+mat-sidenav-content, mat-sidenav{
+  padding: 16px;
+}
+
+mat-sidenav{
+  background-color: rgb(255, 105, 105);
+  max-width: 50vw;
+
+  min-width: 300px;
+}
+
+
+
 
 
 

@@ -23,6 +23,8 @@ export class AppComponent implements OnInit {
 
   spinner = 20;
 
+  opened = false;
+
 
   form = new FormGroup({
     emailFormControl : new FormControl({value: '', disabled: false},
