@@ -1,40 +1,23 @@
-<mat-sidenav-container color="primary">
-  <mat-sidenav #sidenav mode='side'  [(opened)]='this.opened' >
-    <h2> Sidebar </h2>
-    <dl>
-      <dt>Coffee</dt>
-      <dd>- black hot drink</dd>
-      <dd>- black hot drink</dd>
-      <dd>- black hot drink</dd>
-      <dd>- black hot drink</dd>
-      <dt>Milk</dt>
-      <dd>- white cold drink</dd>
-      <dd>- white cold drink</dd>
-      <dd>- white cold drink</dd>
-      <dd>- white cold drink</dd>
-      <dd>- white cold drink</dd>
-      <dt>Tea</dt>
-    </dl>
-  </mat-sidenav>
-  <mat-sidenav-content color="accent">
-    <button mat-icon-button color='warn' (click)='this.opened = !this.opened'>
-      <mat-icon>menu_open</mat-icon>
-    </button>
-    <button mat-flat-button  (click)='this.sidenav.open()'>
-      open
-    </button>
-    <button mat-flat-button  (click)='this.sidenav.close()'>
-      close
-    </button>
-    <h2>Main side  </h2>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias iure ipsum inventore eos nisi maiores totam dicta explicabo odio? </p>
-
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
 
 
 
 
+<mat-menu #appMenu>
+
+  <button mat-menu-item [matMenuTriggerFor]="subMenu" >FrontEnd </button>
+  <button mat-menu-item [matMenuTriggerFor]="subMenuSecond">BackEnd </button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="appMenu">
+  Menu
+</button>
 
 
+<mat-menu #subMenu>
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item>Vue</button>
+</mat-menu>
+<mat-menu #subMenuSecond>
+  <button mat-menu-item>Node</button>
+</mat-menu>
