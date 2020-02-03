@@ -1,10 +1,62 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
+
+
+
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'anuglar-material';
+export class AppComponent implements OnInit {
+  title = 'angular-material';
+
+  toggleButton = true;
+  todo: boolean;
+  inputText = 'this new ';
+
+
+  form = new FormGroup({
+    emailFormControl : new FormControl({value: '', disabled: false},
+      [Validators.required, Validators.email]),
+    emailFormControlSecond: new FormControl({value: '', disabled: false},
+      [Validators.required, Validators.max(999), Validators.min(10)])
+  });
+
+
+
+  // form = new FormGroup({
+  //   emailFormControl: new FormControl({value: '', disabled: false}, [Validators.required ,Validators.email]),
+
+  // });
+  // emailFormControl = new FormControl( 'sd', [Validators.required,Validators.email]);
+
+
+
+
+
+
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.toggleButton = true;
+      console.log(this.todo);
+
+    }, 1000 );
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
