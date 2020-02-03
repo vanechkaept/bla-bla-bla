@@ -1,21 +1,17 @@
-
-
 <div>
-  <button (click)="this.notif= this.notif + 1 " matBadge="{{notif}}" matBadgeColor="accent">
-    ddd
-  </button>
+
+  <mat-progress-spinner [value]="spinner" color="warn"  diameter=100 strokeWidth=5>
+
+  </mat-progress-spinner>
+
 </div>
 
-<div>
-  <button (click)="this.notif= this.notif + 1 " matBadge="{{notif}}" matBadgePosition=" below before" matBadgeOverlap='false' matBadgeColor="primary" matBadgeSize="large">
-    ddd
-  </button>
-</div>
+<p> {{spinner}} </p>
 
-<div>
-  <button (click)="this.notif= this.notif + 1 " [matBadge]="notif" [matBadgeHidden]="notif === 0" matBadgePosition=" above before" matBadgeColor="warn"  matBadgeSize="small">
-    ddd
-  </button>
-</div>
+
+
+<button (click)="add()" >
+  click
+</button>
 
 

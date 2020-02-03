@@ -21,6 +21,8 @@ export class AppComponent implements OnInit {
 
   notif = 0;
 
+  spinner = 20;
+
 
   form = new FormGroup({
     emailFormControl : new FormControl({value: '', disabled: false},
@@ -49,6 +51,16 @@ export class AppComponent implements OnInit {
       console.log(this.todo);
 
     }, 1000 );
+  }
+
+
+  add() {
+
+    this.spinner += 10;
+
+    if (this.spinner > 100 ){
+      this.spinner = 0;
+    }
   }
 
 
