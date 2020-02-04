@@ -18,41 +18,32 @@ export class AppComponent implements OnInit {
   toggleButton = true;
   todo: boolean;
   inputText = 'this new ';
-
   notif = 0;
-
   spinner = 20;
-
   tabRef: string | number;
-
   opened = true;
+  selected: any;
 
+  selectedList = [
+    {value: 'dog'},
+    {value: 'cat'},
+    {value: 'mouse'},
+  ];
 
-
+  selectedNum: number;
   FirstName = new FormControl({value: '', disabled: false},
     [Validators.required, Validators.maxLength(7)]);
-
-
   // form = new FormGroup({
   //   emailFormControl : new FormControl({value: '', disabled: false},
   //     [Validators.required, Validators.email]),
   //   emailFormControlSecond: new FormControl({value: '', disabled: false},
   //     [Validators.required, Validators.max(999), Validators.min(10)])
   // });
-
-
-
   // form = new FormGroup({
   //   emailFormControl: new FormControl({value: '', disabled: false}, [Validators.required ,Validators.email]),
 
   // });
   // emailFormControl = new FormControl( 'sd', [Validators.required,Validators.email]);
-
-
-
-
-
-
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -65,22 +56,27 @@ export class AppComponent implements OnInit {
 
   }
 
-
   add() {
-
     this.spinner += 10;
-
     if (this.spinner > 100 ) {
       this.spinner = 0;
     }
   }
 
-
   tabClick(tabRef) {
     console.log(tabRef.selectedIndex);
     this.tabRef = tabRef.selectedIndex;
     console.log(this.tabRef);
+  }
 
+
+  create(selected) {
+     switch (selected) {
+       case 'dog': {this.selectedNum = 1; break; }
+       case 'cat': {this.selectedNum = 2; break; }
+       case 'mouse': {this.selectedNum = 3; break; }
+       default: break;
+     }
 
 
   }

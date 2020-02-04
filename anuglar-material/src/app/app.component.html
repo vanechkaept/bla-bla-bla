@@ -1,15 +1,24 @@
 
 
-<div class="container">
-  <mat-form-field floatLabel='auto' appearance='fill' color='warn'>
 
-    <input matInput placeholder="Name">
-    <mat-hint>
-      Avarege:
-    </mat-hint>
-    <mat-hint align='end'>
-      5  <strong>people</strong>  like this
-    </mat-hint>
+
+<div class="container">
+
+  <mat-form-field  >
+    <mat-label>Topic </mat-label>
+    <mat-select [(value)]='selected' >
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let list of selectedList" [value]='list.value' (click)='create(list.value)' >{{list.value}}</mat-option>
+    </mat-select>
   </mat-form-field>
 
+
+  <p> {{selected}} </p>
+  <p>Num: {{selectedNum}} </p>
+
+
 </div>
+
+
+
+
