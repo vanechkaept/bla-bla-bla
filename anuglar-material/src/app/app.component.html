@@ -1,32 +1,15 @@
 
-<mat-horizontal-stepper linear >
-    <mat-step label='Shipping Address' [completed]="this.FirstName.valid" optional>
 
-        <mat-form-field>
-          <input type='text' matInput placeholder="First Name" [formControl]="FirstName">
-          <!-- <mat-error *ngIf="(this.form.controls['FirstName'].value.toString()).length < 3 ">
-            Слишком короткое имя
-          </mat-error> -->
-          <mat-error *ngIf="this.FirstName.hasError('required')">
-            Введите имя
-          </mat-error>
-          <mat-error *ngIf="this.FirstName.value.length > 7">
-            Too
-          </mat-error>
-        </mat-form-field>
-      <button mat-button matStepperNext>NExt</button>
-    </mat-step>
-    <mat-step label='Air Address' completed="false" optional>
-      <p> Air Address Details </p>
-      <div>
-        <button mat-button matStepperPrevious>Back</button >
-        <button mat-button matStepperNext>NExt</button>
-      </div>
-    </mat-step>
-    <mat-step label='Home Addresssss' completed="false">
-      <p> Home Address Details </p>
-      <button mat-button matStepperPrevious>Back</button >
-    </mat-step>
+<div class="container">
+  <mat-form-field floatLabel='auto' appearance='fill' color='warn'>
 
+    <input matInput placeholder="Name">
+    <mat-hint>
+      Avarege:
+    </mat-hint>
+    <mat-hint align='end'>
+      5  <strong>people</strong>  like this
+    </mat-hint>
+  </mat-form-field>
 
-</mat-horizontal-stepper>
+</div>
