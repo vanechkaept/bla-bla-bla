@@ -25,15 +25,20 @@ export class AppComponent implements OnInit {
 
   tabRef: string | number;
 
-  opened = false;
+  opened = true;
 
 
-  form = new FormGroup({
-    emailFormControl : new FormControl({value: '', disabled: false},
-      [Validators.required, Validators.email]),
-    emailFormControlSecond: new FormControl({value: '', disabled: false},
-      [Validators.required, Validators.max(999), Validators.min(10)])
-  });
+
+  FirstName = new FormControl({value: '', disabled: false},
+    [Validators.required, Validators.maxLength(7)]);
+
+
+  // form = new FormGroup({
+  //   emailFormControl : new FormControl({value: '', disabled: false},
+  //     [Validators.required, Validators.email]),
+  //   emailFormControlSecond: new FormControl({value: '', disabled: false},
+  //     [Validators.required, Validators.max(999), Validators.min(10)])
+  // });
 
 
 
