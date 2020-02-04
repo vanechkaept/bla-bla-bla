@@ -1,51 +1,45 @@
+<mat-card>
 
-<mat-accordion multi="true" hideToggle="false" >
+  <mat-card-title>
+    this is a card title
 
+  </mat-card-title>
+  <mat-card-content>
+    This is a card content
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title style="width: 100px;">
-        Angular Fund
-      </mat-panel-title>
-      <mat-panel-description>
-        Total duration : 3 hours
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" >
 
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+      </mat-form-field>
+    </form>
 
-    <p>This is the panel content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eos?</p>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" >
 
-    <mat-action-row>
-      <button mat-button> Enroll </button>
-      <button mat-button> Done </button>
-      <button mat-button> Close </button>
-    </mat-action-row>
+      </mat-form-field>
+    </form>
 
-  </mat-expansion-panel>
-
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title style="width: 100px;">
-        React
-      </mat-panel-title>
-      <mat-panel-description>
-        Total duration : 2 hours
-
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <p>This is the panel content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eos?</p>
-
-    <mat-action-row>
-      <button mat-button> Enroll </button>
-      <button mat-button> Done </button>
-      <button mat-button> Close </button>
-    </mat-action-row>
-
-  </mat-expansion-panel>
+    <div class="row" style='text-align: center; border: 1px solid black; min-height: 200px;'>
+      <div class="col-6" style='border: 1px solid greenyellow'>first </div>
+      <div class="col-6" style='border: 1px solid greenyellow'> second  </div>
+    </div>
 
 
 
-</mat-accordion>
+  </mat-card-content>
+  <mat-card-actions align='center' >
+    <button mat-flat-button>
+      Login
+    </button>
+    <button mat-icon-button>
+      <mat-icon color='accent' >home</mat-icon>
+    </button>
+  </mat-card-actions>
+
+
+</mat-card>
+
+
 
