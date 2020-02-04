@@ -23,6 +23,8 @@ export class AppComponent implements OnInit {
 
   spinner = 20;
 
+  tabRef: string | number;
+
   opened = false;
 
 
@@ -53,6 +55,9 @@ export class AppComponent implements OnInit {
       console.log(this.todo);
 
     }, 1000 );
+
+
+
   }
 
 
@@ -60,9 +65,19 @@ export class AppComponent implements OnInit {
 
     this.spinner += 10;
 
-    if (this.spinner > 100 ){
+    if (this.spinner > 100 ) {
       this.spinner = 0;
     }
+  }
+
+
+  tabClick(tabRef) {
+    console.log(tabRef.selectedIndex);
+    this.tabRef = tabRef.selectedIndex;
+    console.log(this.tabRef);
+
+
+
   }
 
 

@@ -1,45 +1,14 @@
-<mat-card>
+<mat-tab-group #tabRef (click)='tabClick(tabRef)' select>
+  <mat-tab label="react"> react  content</mat-tab>
+  <mat-tab label="vue"> vue  content</mat-tab>
+  <mat-tab label="angular"> angular   content</mat-tab>
 
-  <mat-card-title>
-    this is a card title
-
-  </mat-card-title>
-  <mat-card-content>
-    This is a card content
-
-    <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Email" >
-
-      </mat-form-field>
-    </form>
-
-    <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Email" >
-
-      </mat-form-field>
-    </form>
-
-    <div class="row" style='text-align: center; border: 1px solid black; min-height: 200px;'>
-      <div class="col-6" style='border: 1px solid greenyellow'>first </div>
-      <div class="col-6" style='border: 1px solid greenyellow'> second  </div>
-    </div>
+</mat-tab-group>
 
 
 
-  </mat-card-content>
-  <mat-card-actions align='center' >
-    <button mat-flat-button>
-      Login
-    </button>
-    <button mat-icon-button>
-      <mat-icon color='accent' >home</mat-icon>
-    </button>
-  </mat-card-actions>
+{{ tabRef.selectedIndex}}
 
 
-</mat-card>
-
-
+{{this.tabRef}}
 

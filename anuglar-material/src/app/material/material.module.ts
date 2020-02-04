@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatBadgeModule } from '@angular/material';
+import { MatButtonModule, MatBadgeModule, MatStepperModule } from '@angular/material';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -14,6 +14,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -33,6 +34,10 @@ const MaterialCoponents = [
   MatGridListModule,
   MatExpansionModule,
   MatCardModule,
+  MatTabsModule,
+  MatStepperModule,
+
+
 
 ];
 
