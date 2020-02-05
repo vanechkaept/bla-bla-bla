@@ -16,6 +16,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -38,8 +40,8 @@ const MaterialCoponents = [
   MatTabsModule,
   MatStepperModule,
   MatSelectModule,
-
-
+  MatCheckboxModule,
+  MatRadioModule,
 
 ];
 
