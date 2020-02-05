@@ -15,6 +15,9 @@ import {ErrorStateMatcher} from '@angular/material/core';
 export class AppComponent implements OnInit {
   title = 'angular-material';
 
+  startDate = new Date();
+
+
   toggleButton = true;
   todo: boolean;
   inputText = 'this new ';
@@ -23,6 +26,7 @@ export class AppComponent implements OnInit {
   tabRef: string | number;
   opened = true;
   selected: any;
+
 
   selectedList = [
     {value: 'dog'},
@@ -33,6 +37,14 @@ export class AppComponent implements OnInit {
   selectedNum: number;
   FirstName = new FormControl({value: '', disabled: false},
     [Validators.required, Validators.maxLength(7)]);
+
+
+  minDate = new Date();
+
+  dateFilter = date => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6 ;
+  }
   // form = new FormGroup({
   //   emailFormControl : new FormControl({value: '', disabled: false},
   //     [Validators.required, Validators.email]),
@@ -55,6 +67,7 @@ export class AppComponent implements OnInit {
 
 
   }
+
 
   add() {
     this.spinner += 10;

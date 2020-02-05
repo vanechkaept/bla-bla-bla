@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatBadgeModule, MatStepperModule } from '@angular/material';
+import { MatButtonModule, MatBadgeModule, MatStepperModule, MatNativeDateModule } from '@angular/material';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -18,6 +18,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -42,6 +43,8 @@ const MaterialCoponents = [
   MatSelectModule,
   MatCheckboxModule,
   MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 
 ];
 

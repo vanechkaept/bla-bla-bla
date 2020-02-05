@@ -7,36 +7,17 @@
 
   <div class="row">
 
-    <mat-checkbox>
-      select this
-    </mat-checkbox>
-    <mat-checkbox color='primary'>
-      select this
-    </mat-checkbox>
-    <mat-checkbox>
-      select this
-    </mat-checkbox>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date"
+      [min]="minDate"
+      [matDatepickerFilter]="dateFilter" >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker  [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
 
   </div>
 
-  <div class="row">
 
-    <mat-radio-group #radio color="warn">
-      <mat-radio-button value='dog'>
-        Dog
-      </mat-radio-button>
-      <mat-radio-button value='cat'>
-        Cat
-      </mat-radio-button>
-      <mat-radio-button value='mouse'>
-        Mouse
-      </mat-radio-button>
-
-    </mat-radio-group>
-
-    <p> {{radio.selected}} </p>
-
-  </div>
 
 
 
