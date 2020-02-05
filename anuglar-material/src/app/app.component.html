@@ -7,13 +7,16 @@
 
   <div class="row">
 
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Choose a date"
-      [min]="minDate"
-      [matDatepickerFilter]="dateFilter" >
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker  [startAt]="startDate"></mat-datepicker>
-    </mat-form-field>
+    <p matTooltip="Info about the action">
+      this title help
+    </p>
+
+    <p>
+      <button mat-button (click)='openSnackBar("im click", "Undo")' >
+        Delete content
+
+      </button>
+    </p>
 
   </div>
 

@@ -1,3 +1,4 @@
+import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
@@ -56,6 +57,22 @@ export class AppComponent implements OnInit {
 
   // });
   // emailFormControl = new FormControl( 'sd', [Validators.required,Validators.email]);
+
+
+
+  constructor(private snackBar: MatSnackBar) {}
+
+
+  openSnackBar(message, action) {
+    const snackBarRef = this.snackBar.open(message, action, {duration: 2000});
+    // this.snackBar.open(message, action);
+    snackBarRef.afterDismissed().subscribe(() => {
+      console.log('The snackbar was dismiss');
+    });
+    snackBarRef.onAction().subscribe(() => {
+      console.log('The snackbar was Triggere');
+    });
+  }
 
   ngOnInit(): void {
     setTimeout(() => {
