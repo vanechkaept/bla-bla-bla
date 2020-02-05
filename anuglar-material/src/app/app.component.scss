@@ -1,12 +1,28 @@
 
 
 
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.nav-item{
+  &:hover{
+    cursor: pointer;
+  }
+
+}
 
 
 
-.navbar{
-  justify-content: space-between;
-  line-height: 65px;
+
+.nav__a{
+  border-bottom: 1px solid red;
+  padding: 8px 0px;
+  margin: 0 8px;
 }
 
 
