@@ -10,11 +10,13 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { Routes, RouterModule } from '@angular/router';
+import { ItemComponent } from './components/item/item.component';
 
 
 const appRoutes: Routes =[
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
+  { path: 'item/:id', component: ItemComponent},
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -25,6 +27,7 @@ const appRoutes: Routes =[
     HomeComponent,
     AboutComponent,
     NotFoundComponent,
+    ItemComponent,
   ],
   imports: [
     BrowserModule,

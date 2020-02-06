@@ -1,0 +1,108 @@
+
+
+
+<div class="container" style='padding-top: 10px;'>
+  <mat-card>
+    <mat-card-title *ngIf='name'>
+      {{name | titlecase }}, привет!
+    </mat-card-title>
+    <mat-card-title *ngIf='!name'>
+      <div class="row">
+        <div class="col-6">
+          <span>Привет! Будем знакомиться?</span>
+        </div>
+        <div class="col-6 text-right" style='margin:auto;'>
+          <button mat-mini-fab >
+            <i class="material-icons">how_to_reg</i>
+          </button>
+
+        </div>
+      </div>
+
+
+    </mat-card-title>
+    <mat-card-subtitle>
+      <ng-container *ngIf='(+id) === 3 '>
+        <p> Ваша скидка: {{id}}% </p>
+
+      </ng-container>
+
+      <ng-container *ngIf='(+id) !== 3 '>
+        <p> У вас пока нету персональной скидки  </p>
+
+      </ng-container>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <div class="container">
+        <p *ngIf="price"> Сумма на счету: {{price}} </p>
+
+        <p *ngIf="product">Продукт к покупке:  </p>
+        <hr>
+
+
+        <div class="row" *ngIf="product">
+
+          <div class="col-2">
+            <mat-card-subtitle>Название: </mat-card-subtitle>
+            <h5 class="text-center">{{product | titlecase }}</h5>
+          </div>
+          <div class="col-3">
+            <img mat-card-image [src]='pic' >
+
+          </div>
+          <div class="col-2">
+            <mat-card-subtitle>Цена: </mat-card-subtitle>
+            <h6 class='text-center'> ${{price ? price : 0 }} </h6>
+          </div>
+          <div class="col-3"></div>
+
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-1 text-center" style="margin:auto; font-size: 30px;">
+            <mat-icon class="material-icons" style='font-size: 30px;' color='accent'>store_mall_directory</mat-icon>
+          </div>
+          <div class="col">
+            <mat-form-field >
+              <input matInput type='number' placeholder="id" [formControl]="FormId">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field >
+              <input matInput type='number' placeholder="price" [formControl]="FormPrice">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field >
+              <input matInput type='text' placeholder="product" [formControl]="FormProduct">
+            </mat-form-field>
+          </div>
+          <div class="col text-right" style="margin:auto;">
+            <button mat-flat-button color='warn' (click) = 'addPrice()' > Подобрать </button>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>
+
+
+
+
+
+
+
+
