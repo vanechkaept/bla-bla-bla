@@ -1,0 +1,133 @@
+.span{
+  width: 130px;
+  height: 40px;
+  // border: 3px solid red;
+  margin: 0px;
+  padding: 0;
+  transition: .5s;
+  // cursor: pointer;
+
+  &:hover{
+
+    .green{
+      margin-right:50px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      border: none;
+      color: rgb(23, 151, 23);
+      background-color: rgb(23, 151, 23);
+      transition: .5s;
+
+      .spanToRight{
+        padding-left: 45px;
+        font-weight: 300;
+      }
+
+    }
+  }
+}
+
+.spanToRight{
+  transition: .5s;
+}
+
+.green{
+  width: 130px;
+  height: 40px;
+  background-color: white;
+  color: rgb(23, 151, 23);
+  border: 1px solid rgb(23, 151, 23);
+  margin: 0;padding: 0;
+  transition: .5s;
+}
+
+// .green{
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50px;
+//   color: rgb(23, 151, 23);
+//   background-color: rgb(23, 151, 23);
+// }
+
+
+
+
+
+
+
+.subContainer{
+  padding: 10px;
+  background-color: rgb(212, 212, 212);
+  border: 3px solid rgb(73, 73, 73);
+  border-radius: 30px;
+}
+
+.setContainer{
+  border: 4px solid rgb(43, 43, 43);
+  border-radius: 20px;
+  width: 100%;
+  height: 600px;
+  background-color:rgb(55, 141, 223);
+}
+
+.submarinContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+  background-color: rgb(55, 52, 241);
+  display: block;
+  transform: translate(-50%, -50%);
+
+}
+
+.submarine{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 100px;
+  background-color: rgb(184, 54, 54);
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50px;
+}
+
+.stern{
+  position: absolute;
+  top: -15%;
+  left: 40%;
+  width: 30px;
+  height: 30px;
+  border-bottom: 1px solid black;
+  background-color: rgb(184, 54, 54);
+
+  transform: translate(-50%, -50%);
+}
+
+.inner-stern{
+  position: absolute;
+  top: 50%;
+  left: 200%;
+  width: 60px;
+  height: 30px;
+  border-top-right-radius: 100%;
+  border-bottom: 1px solid black;
+  background-color: rgb(184, 54, 54);
+
+  transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
+
+
+

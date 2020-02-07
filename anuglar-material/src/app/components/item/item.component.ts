@@ -69,7 +69,7 @@ export class ItemComponent implements OnInit, OnDestroy {
   }
 
   addPrice() {
-    // console.log(this.route.snapshot.url['0'].path);
+    console.log(this.route.snapshot.url['0'].path);
     this.router.navigate([`/item/${this.FormId.value}`], {queryParams:
             { price: this.FormPrice.value, product : this.FormProduct.value }});
 
