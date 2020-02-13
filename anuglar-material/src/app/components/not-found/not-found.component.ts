@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
+  timenow: Date;
+  newtime: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toTime(){
+    this.newtime = this.timenow.toISOString();
+
+  }
 }

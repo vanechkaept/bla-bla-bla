@@ -1,6 +1,6 @@
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +44,6 @@ const appRoutes: Routes =[
     RouterModule.forRoot(appRoutes),
 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
