@@ -78,6 +78,23 @@ mat-grid-tile{
 
 
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(201, 201, 201);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(175, 175, 175);
+}
+
+
 
 
 
