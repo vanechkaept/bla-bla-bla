@@ -23,10 +23,6 @@
 </div>
 
 
-<div class='spinner'>
-
-</div>
-
 <br>
 
 <div class="subContainer" >
@@ -47,57 +43,54 @@
     <div class='setContainer-top'  style='height: 80%;'>
 
 
-    <div class="submarinContainer" >
-      <div class="submarine" >
-        <div class="stern">
-          <div class="top-stern">
-            <div class="second-top-stern">
-              <div class="inner-second-top-stern">
+      <div class="submarinContainer" >
+        <div class="submarine" >
 
-              </div>
-              <div class="light-stern">
-
+          <div class="stern">
+            <div class="top-stern">
+              <div class="second-top-stern">
+                <div class="inner-second-top-stern">
+                </div>
+                <div class="light-stern">
+                </div>
               </div>
             </div>
+            <div class="window-fir"></div>
+            <div class="window-sec"></div>
+            <div class="window-third"></div>
+
+            <div class="antenna">
+              <div class="antenna-fir"></div>
+              <div class="antenna-sec"></div>
+              <div class="antenna-thr"></div>
+              <div class="antenna-four"></div>
+              <div class="antenna-five"></div>
+              <div class="antenna-ball"></div>
+            </div>
+          </div> <!-- stern -->
+
+
+          <div class="window-big-fir"></div>
+          <div class="window-big-sec"></div>
+          <div class="window-big-third"></div>
+          <div class="window-thief"></div>
+
+          <div class="propeller">
+            <div class="propeller-light"></div>
+            <div class="propeller-dark"></div>
           </div>
-          <div class="window-fir"></div>
-          <div class="window-sec"></div>
-          <div class="window-third"></div>
 
-          <div class="antenna">
-            <div class="antenna-fir"></div>
-            <div class="antenna-sec"></div>
-            <div class="antenna-thr"></div>
-            <div class="antenna-four"></div>
-            <div class="antenna-five"></div>
-            <div class="antenna-ball"></div>
+          <div class="bubbles">
+            <div class="bubbles-fir"></div>
+            <div class="bubbles-sec"></div>
+            <div class="bubbles-thr"></div>
+            <div class="bubbles-four"></div>
           </div>
 
-        </div>
-
-        <div class="window-big-fir"></div>
-        <div class="window-big-sec"></div>
-        <div class="window-big-third"></div>
-        <div class="window-thief"></div>
-
-        <div class="propeller">
-          <div class="propeller-light"></div>
-          <div class="propeller-dark"></div>
-        </div>
-
-        <div class="bubbles">
-          <div class="bubbles-fir"></div>
-          <div class="bubbles-sec"></div>
-          <div class="bubbles-thr"></div>
-          <div class="bubbles-four"></div>
-        </div>
+        </div> <!-- submarine -->
 
       </div>
-
     </div>
-
-    </div>
-
 
 
     <div class="setContainer-floor">
@@ -126,6 +119,37 @@
   </mat-card>
 
 
+  <div class="window-talk">
+
+    <div class="scroll-window">
+      <div class="scroll-talk-fir"></div>
+    </div>
+    <div class="scroll-window">
+      <div class="scroll-talk-gen"></div>
+      <div class="red-square">
+        <div class="red-square-top"></div>
+        <div class="red-square-right"></div>
+        <div class="red-square-bottom"></div>
+        <div class="red-square-left"></div>
+      </div>
+      <div class="block-tone">
+        <button mat-icon-button  class='button-tone'>
+          <i class="material-icons volume-icon">volume_up</i>
+        </button>
+
+      </div>
+      <!-- <h1>ww</h1> -->
+      <div class="text-block">
+        <div class="text"> {{win$ | async }} </div>
+      </div>
+
+    </div>
+
+  </div>
+
 
 
 </div>
+
+
+
