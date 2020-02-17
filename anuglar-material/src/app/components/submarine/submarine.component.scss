@@ -184,14 +184,19 @@ $message-color: white;
   left: 50%;
   width: 400px;
   height: 200px;
-  // background-color: rgb(55, 52, 241);
+  background-color: rgb(55, 52, 241);
   display: block;
   transform: translate(-50%, -50%);
-  animation: submarine-move 10s ease-in-out infinite;
+  // animation: submarine-move 10s ease-in-out infinite;
 
+  transition: 5s ;
 
 
   &:hover{
+
+    top: 0;
+
+
     .submarine{
       top: 65%;
       left: 35%;
@@ -847,20 +852,48 @@ $message-color: white;
 
 }
 
-.block-tone{
+.tone-block{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -50%;
+  right: -50%;
 }
 
-button.button-tone:hover{
-  // background-color: red;
+.music-fir{
+  position: absolute;
 
+  top: 0%;
+  left: 80%;
+  width: 1vw;
+  height: 1vw;
+  color: white;
+
+
+
+  animation: music-icon 2s linear infinite normal ;
 }
+
+.music-sec{
+  position: absolute;
+
+  top: 0%;
+  left: 80%;
+  width: 1vw;
+  height: 1vw;
+  color: rgba(255, 255, 255, 0) ;;
+
+
+
+
+  animation: music-icon 2s linear infinite normal ;
+  animation-delay: 1s;
+}
+
+
 
 .volume-icon{
   color: rgba(202, 202, 202, 0.7);
   transition: .2s;
+  font-size: 1.3vw;
   &:hover{
     color: rgb(150, 150, 150);
   }
@@ -879,6 +912,7 @@ button.button-tone:hover{
   {
     top: 50%;
     left: 50%;
+
   }
   50%
   {
@@ -889,6 +923,29 @@ button.button-tone:hover{
   {
     top: 50%;
     left: 50%;
+  }
+}
+
+@keyframes music-icon{
+  0%
+  {
+    left: 80%;
+    top: 10%;
+    // color: white;
+  }
+  10%{
+    color: rgba(202, 202, 202, 1);
+  }
+  50%
+  {
+  }
+  100%
+  {
+    left: 150%;
+    top: -10%;
+    color: rgba(255, 255, 255, 0) ;
+    transform: rotate(360deg);
+
   }
 }
 

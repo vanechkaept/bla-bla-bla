@@ -127,17 +127,23 @@
     <div class="scroll-window">
       <div class="scroll-talk-gen"></div>
       <div class="red-square">
+        <div class="tone-block">
+          <button mat-icon-button  class='button-tone'>
+            <i class="material-icons volume-icon">volume_up</i>
+          </button>
+          <div class="music-fir">
+            <i class="material-icons" style='font-size: .6vw;'>workspaces_outline</i>
+          </div>
+          <div class="music-sec">
+            <i class="material-icons" style='font-size: .6vw;'> music_note</i>
+          </div>
+        </div>
         <div class="red-square-top"></div>
         <div class="red-square-right"></div>
         <div class="red-square-bottom"></div>
         <div class="red-square-left"></div>
       </div>
-      <div class="block-tone">
-        <button mat-icon-button  class='button-tone'>
-          <i class="material-icons volume-icon">volume_up</i>
-        </button>
 
-      </div>
       <!-- <h1>ww</h1> -->
       <div class="text-block">
         <div class="text"> {{win$ | async }} </div>
