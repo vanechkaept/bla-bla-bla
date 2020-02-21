@@ -105,7 +105,7 @@ $message-color: white;
   margin: 0;
   background:#130560ea;
   background:linear-gradient(to top, #130661ea 0%, #130661ea 90%, #3564c9ea 100%);
-  overflow: hidden;
+  // overflow: hidden;
   border-radius: 0;
 }
 
@@ -184,7 +184,7 @@ $message-color: white;
   left: 50%;
   width: 400px;
   height: 200px;
-  background-color: rgb(55, 52, 241);
+  // background-color: rgb(55, 52, 241);
   display: block;
   transform: translate(-50%, -50%);
   // animation: submarine-move 10s ease-in-out infinite;
@@ -194,7 +194,19 @@ $message-color: white;
 
   &:hover{
 
-    top: 0;
+    top: 100px;
+    left: 40%;
+
+    .top-stern{
+      top: -100px;
+      height: 103px;
+
+    }
+
+    .top-stern-sec{
+      top: -100px;
+      height: 103px;
+    }
 
 
     .submarine{
@@ -250,6 +262,8 @@ $message-color: white;
   border-bottom-right-radius: 70%;
 
   transition: 2s;
+
+  animation: submarine-move 15s ease-in-out infinite;
 
 }
 
@@ -367,22 +381,46 @@ $message-color: white;
   background-color: $second-color;
 }
 
-
-.top-stern{
+.top-stern-sec{
   position: absolute;
   top: -40px;
   left: 25px;
   width: 10px;
   height: 43px;
   background-color: $general-color;
+  // background-color: red;
   border-top-right-radius: 10px ;
+  border-top-left-radius: 10px ;
+
+  transition: 5s;
+
+  // animation: top-stern-rotate 1s inline infinite;
+
+  // animation: top-stern-rotate 5s linear infinite;
+}
+.top-stern{
+  position: absolute;
+  top: -40px;
+  left: 25px;
+  width: 10px;
+  height: 43px;
+  // background-color: $general-color;
+  // background-color: red;
+  border-top-right-radius: 10px ;
+
+  transition: 5s;
+
+  // animation: top-stern-rotate 1s inline infinite;
+
+  animation: top-stern-rotate 5s linear infinite;
+
 }
 
 .second-top-stern{
   position: absolute;
   top: 0;
   left:-9px;
-  width: 10px;
+  width: 13px;
   height: 10px;
   background-color: $general-color;
 }
@@ -908,19 +946,20 @@ $message-color: white;
 
 
 @keyframes submarine-move{
-  0%
-  {
+  0%  {
     top: 50%;
     left: 50%;
 
   }
-  50%
-  {
+  30%{
     top: 45%;
     left: 55%;
   }
-  100%
-  {
+  60%{
+    top: 43%;
+    left: 45%;
+  }
+  100%  {
     top: 50%;
     left: 50%;
   }
@@ -945,6 +984,33 @@ $message-color: white;
     top: -10%;
     color: rgba(255, 255, 255, 0) ;
     transform: rotate(360deg);
+
+  }
+}
+
+
+
+@keyframes top-stern-rotate{
+  0%{
+    // width: 10px;
+    // color: white;
+    // background-color: #4a6b6d;
+  }
+  50%{
+    // width: 70px;
+  }
+  100%{
+    // left: 150%;
+    // top: -10%;
+    // color: rgba(255, 255, 255, 0) ;
+    // transform: rotate(360deg);
+    // width: 40px;
+
+    // background-color: yellow;
+
+    transform: rotateY(360deg);
+
+
 
   }
 }
