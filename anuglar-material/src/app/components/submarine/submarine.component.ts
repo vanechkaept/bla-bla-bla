@@ -32,7 +32,6 @@ export class SubmarineComponent implements OnInit {
 
     this.win$ = timer(0, 3000).pipe(
       tap( event =>  {
-        console.log(event);
         if (event === 10) {
           event = 0;
         }

@@ -1,0 +1,39 @@
+
+
+.card-header-image{
+  // background-image: url('https://lamcdn.net/lookatme.ru/post-cover/YTs4AdwURuPWdki4OJW8jQ-default.jpg');
+  background-size: cover;
+  background-position: center;
+
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin: auto;
+
+}
+
+
+.btn__back{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: rgba(128, 128, 128, 0.7);
+
+  transition: .3s;
+
+  &:hover{
+    color: rgb(97, 97, 97);
+  }
+}
+
+
+// .item__subbig{
+//   color:rgb(94, 95, 95);
+//   font-style: 1.5rem;
+//   margin-top: -10px ;
+//   font-weight: 300;
+// }
+

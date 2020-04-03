@@ -18,11 +18,11 @@
 }
 
 .nav-link{
-  color: rgb(187, 187, 187);
+  color: #a9a9a9;
   font-weight: 500;
 
   &.active{
-    color: rgb(231, 231, 231);
+    color: #828282;
     font-weight: 500;
   }
 }
@@ -93,6 +93,10 @@ mat-grid-tile{
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(175, 175, 175);
 }
+
+
+
+
 
 
 

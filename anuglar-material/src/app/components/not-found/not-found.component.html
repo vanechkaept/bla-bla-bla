@@ -1,18 +1,37 @@
 <p>not-found works!</p>
 
-<div class="container">
+<div class="container" style='background-color: rgb(255, 255, 255);padding: 15px;'>
+  <button mat-icon-button class='btn__close'>
+    <i class="material-icons">close</i>
+  </button>
+
+  <button mat-icon-button class='btn__add' (click)='add()'>
+    <i class="material-icons" >add</i>
+  </button>
 
   <input type="text" [(ngModel)]='timenow' >
 
 
-  <button (click)='toTime()' >
-    sss
+  <button mat-button (click)='toTime()' >
+    toTime
   </button>
   <h1> {{ this.newtime }} </h1>
 
-  <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
+  <br><br><br>
+
+  <h5 (click)="onClick.emit('Neo')"> Имя:  {{myFriend}} </h5>
+
+
+
+  <br><br><br><br><br><br>
+
+
+
+  <div class='text__block' > text  </div>
+
+
+
+
 
 </div>
 

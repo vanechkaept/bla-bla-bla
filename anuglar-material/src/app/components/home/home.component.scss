@@ -1,0 +1,58 @@
+.home__gif__block{
+  width: 100%;
+  height: calc(60vh - 62px);
+  background-image: url(https://media.giphy.com/media/9ipg1KVkjJC3C/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.home__color__block{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 7, 0.2);
+
+}
+
+
+.home__big__text{
+  font-size: 4rem;
+  // font-family: 'Arial Black';
+  letter-spacing: 3px;
+  color: #353d42;
+  font-weight: 600;
+  font-stretch: ultra-condensed;
+  border-bottom: 7px solid rgba(0, 0, 0, 0);
+
+  &:hover{
+    border-bottom: 7px solid rgb(0, 0, 0);
+  }
+}
+
+.home__big__text:nth-child(1){
+  color: #F5F5F5;
+  font-weight: 700;
+
+}
+
+.home__small__detail{
+  font-weight: 1000;
+  font-family: monospace;
+  color: #5dedcb;
+
+  &.light{
+    color: #ed5d7f;
+  }
+}
+
+.home__sub__big__text{
+  color: #4965c0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.home__text{
+  color:rgb(94, 95, 95);
+}
+

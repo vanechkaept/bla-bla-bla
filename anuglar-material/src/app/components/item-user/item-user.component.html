@@ -1,0 +1,55 @@
+<div
+class="container"
+style='margin-top: 15px; padding-bottom: 10px;'>
+
+
+    <mat-card  style='position: relative;'>
+      <button mat-icon-button class='btn__back' (click)='navigateBack()' >
+        <i class="material-icons">keyboard_backspace</i>
+      </button>
+
+      <div class="row">
+
+      <div class="col-4" style='margin:10px  auto;'>
+        <div class="card-header-image" [style.background-image]="this.user.img ? 'url(' + this.user.img + ')' : 'url(' + this.defaultImage + ')'"></div>
+      </div>
+
+      <div class="col-8">
+              <!-- <div mat-card-avatar class="card-header-image" ></div> -->
+          <mat-card-title> {{this.user.firstName}} </mat-card-title>
+          <mat-card-subtitle> Рейтинг: {{this.user.rating}} </mat-card-subtitle>
+          <mat-card-content>
+            <div class="text">
+              {{this.user.title}}
+            </div>
+
+
+          </mat-card-content>
+          <mat-card-actions align="start">
+              <button mat-stroked-button >{{ user.rating <= 5? 'Заблокировать' : 'Выдать подарок'}}</button>
+              <button mat-stroked-button (click)="getLastShopList()"> Покупки</button>
+          </mat-card-actions>
+          <mat-divider></mat-divider>
+          <mat-card-content *ngIf="userList !== 'close' ">
+            <div class="sub__big__text"> {{this.userList !== undefined ? 'Последние покупки:' : 'Давно не делал покупки'}} </div>
+            <mat-list *ngIf='this.userList !== undefined'>
+              <h3 mat-subheader> {{this.userList.nameList}} </h3>
+              <mat-list-item *ngFor='let list of this.userList.list'>
+                 <mat-icon mat-list-icon style='color:whitesmoke;'>folder</mat-icon>
+                 <h4 mat-line style='font-weight: 500;'> {{list.food}} </h4>
+                 <p mat-line> Срок годности: {{list.expiration ? list.expiration : ' Неизвестно'}} </p>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <!-- <mat-card-footer>
+              Footer
+          </mat-card-footer> -->
+      </div>
+
+    </div>
+
+
+     </mat-card>
+
+
+</div>

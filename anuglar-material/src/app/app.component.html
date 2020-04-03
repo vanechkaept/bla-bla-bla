@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md ftco_navbar ftco-navbar-light" style="background-color: rgb(57, 55, 189); height: 62px; padding-bottom: 0;">
-  <div class="container" style='border-bottom: 2px solid rgb(218, 218, 218);'>
+<nav class="navbar navbar-expand-md ftco_navbar ftco-navbar-light" style="background-color: #FFFFFF; height: 62px; padding-bottom: 0; box-shadow: 0 0 10px rgb(179, 179, 179);">
+  <div class="container" style='border-bottom: 2px solid #a9a9a9'>
     <a class="navbar-brand" style='padding: 0px;' routerLink="/">
-      <mat-icon  style="font-size: 40px; color: rgb(218, 218, 218); margin-right: 5px;"> apartment </mat-icon>
+      <mat-icon  style="font-size: 40px;color: rgb(58, 58, 58); margin-right: 5px;"> apartment </mat-icon>
     </a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav">
@@ -17,7 +17,7 @@
         </li>
         <li class="nav-item">
           <button mat-button>
-            <a class="nav-link" routerLink="/time" routerLinkActive="active">Time</a>
+            <a class="nav-link" routerLink="/game" routerLinkActive="active">Game</a>
           </button>
         </li>
         <li class="nav-item">
@@ -25,16 +25,27 @@
             <a class="nav-link" routerLink="/submarine" routerLinkActive="active">Submarine</a>
           </button>
         </li>
+        <li class="nav-item">
+          <button mat-button>
+            <a class="nav-link" routerLink="/calendar" routerLinkActive="active">Calendar</a>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button mat-button>
+            <a class="nav-link" routerLink="/item" routerLinkActive="active">Sale</a>
+          </button>
+        </li>
+
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <button mat-icon-button [routerLink]="['item', '3' ]" [queryParams]="{'product':'phone X', 'price': 200}" >
-            <mat-icon style="font-size: 23px; color: rgb(218, 218, 218);"> cloud_done </mat-icon>
+          <button mat-icon-button  routerLinkActive="active" [routerLink]="['item', '3' ]" [queryParams]="{'product':'phone X', 'price': 200}" >
+            <mat-icon style="font-size: 23px; color: #828282"> cloud_done </mat-icon>
           </button>
         </li>
         <li class="nav-item" >
-          <button mat-icon-button [routerLink]="['item', '10' ]" [queryParams]="{'product':'Pancil'}">
-            <mat-icon style="font-size: 23px; color: rgb(218, 218, 218);"> adb </mat-icon>
+          <button mat-icon-button routerLinkActive="active" [routerLink]="['item']" [queryParams]="{'product':'Pancil'}">
+            <mat-icon style="font-size: 23px; color: #828282"> adb </mat-icon>
           </button>
         </li>
       </ul>
@@ -45,7 +56,7 @@
 
 
 
-<div class="content" style="height: calc(100vh - 62px); overflow: auto;margin: 0; padding: 0 ; background-color: rgba(211, 202, 202, 0.404);">
+<div class="content" style="height: calc(100vh - 62px); overflow: auto;margin: 0; padding: 0 ; background-color: #F5F5F5;">
   <router-outlet></router-outlet>
 </div>
 

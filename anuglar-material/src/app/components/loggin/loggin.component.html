@@ -1,0 +1,82 @@
+<div
+class="container"
+style='margin-top: 15px; padding-bottom: 10px; '>
+
+  <div class="row" >
+    <div class="col-6" style='background-color: white; margin: auto;'>
+
+
+        <mat-horizontal-stepper #stepper linear>
+          <mat-step [completed]='this.firstPosition.valid' >
+            <form [formGroup]='firstPosition' >
+              <ng-template matStepLabel>Имя </ng-template>
+              <mat-form-field>
+                <mat-label>Введите свое имя </mat-label>
+                <input matInput placeholder="Данисимус" formControlName="firstName" required>
+                <button mat-button *ngIf="this.firstPosition.controls.firstName.value"
+                matSuffix
+                mat-icon-button aria-label="Clear"
+                (click)="  this.firstPosition.controls.firstName.setValue('') "
+                >
+                  <mat-icon>close</mat-icon>
+                </button>
+                <ng-template *ngIf="this.firstPosition.valid">
+                  <mat-error *ngIf="this.firstPosition.controls.firstName.errors.required"> Введите свое имя  </mat-error>
+
+                </ng-template>
+              </mat-form-field>
+              <div>
+                <button mat-stroked-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <mat-step [completed]='this.secondPosition.valid'>
+            <form [formGroup]='secondPosition' >
+              <ng-template matStepLabel>Карта</ng-template>
+              <mat-form-field>
+                <mat-label>Введите номер карты </mat-label>
+                <input matInput  formControlName="cardNumber" type='number' required>
+                <mat-error *ngIf="this.secondPosition.controls.cardNumber.hasError('required')"> введите    </mat-error>
+                <mat-error *ngIf="this.secondPosition.controls.cardNumber.hasError('max')">
+                  максимальная длина номера карты {{this.secondPosition.controls.cardNumber.errors.max.actual.toString().length}}/
+                  {{this.secondPosition.controls.cardNumber.errors.max.max.toString().length}}
+                </mat-error>
+                <mat-error *ngIf="this.secondPosition.controls.cardNumber.hasError('min')">
+                  минимальная  длина номера карты {{this.secondPosition.controls.cardNumber.errors.min.min.toString().length}} /  {{this.secondPosition.controls.cardNumber.errors.min.actual.toString().length}}
+
+                </mat-error>
+
+
+              </mat-form-field>
+              <div>
+                <button mat-stroked-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <mat-step>
+            <form [formGroup]='finalPosition' >
+              <ng-template matStepLabel>Подтверждение</ng-template>
+
+              <div>
+                <h4 class="text">Ваше имя: {{this.firstPosition.controls.firstName.value}} </h4>
+                <h4> Номер карты: {{this.secondPosition.controls.cardNumber.value}} </h4>
+                <button mat-stroked-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+
+
+        </mat-horizontal-stepper>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+</div>
