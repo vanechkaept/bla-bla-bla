@@ -1,3 +1,4 @@
+import { DateService } from './../../../shared/services/date.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrgSelectorComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dateService: DateService
+  ) { }
 
   ngOnInit() {
+  }
+
+  go(move: number){
+    this.dateService.changeMonth(move);
   }
 
 }

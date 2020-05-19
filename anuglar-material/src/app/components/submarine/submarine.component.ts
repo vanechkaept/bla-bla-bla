@@ -30,6 +30,8 @@ export class SubmarineComponent implements OnInit {
   ngOnInit() {
 
 
+
+
     this.win$ = timer(0, 3000).pipe(
       tap( event =>  {
         if (event === 10) {
@@ -39,6 +41,10 @@ export class SubmarineComponent implements OnInit {
 
       } ),
      );
+  }
+
+  getOut(){
+    localStorage.setItem('data', 'save this')
   }
 
 }

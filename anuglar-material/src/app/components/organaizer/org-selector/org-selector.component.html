@@ -1,1 +1,12 @@
-<p>org-selector works!</p>
+
+  <div class='sub__big__text'>
+    <i class="material-icons" (click)='go(-1)' >arrow_left</i>
+
+    <span>
+      {{this.dateService.date | async | moment__pipe}}
+    </span>
+
+    <i class="material-icons" (click)='go(1)' >arrow_right</i>
+
+  </div>
+

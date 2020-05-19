@@ -44,7 +44,6 @@ export class GamePaintingComponent implements OnInit {
    );
 
    this.rangeChange$ = from(fromEvent(this.range, 'mouseup')).pipe(
-    tap(e => console.log(e)),
     map(e => (this.value))
    );
 
@@ -131,7 +130,7 @@ export class GamePaintingComponent implements OnInit {
     this.canvas.height = this.rect.height * this.scale;
     this.ctx.scale(this.scale, this.scale );
 
-    this.value = 2;
+    this.value = 1;
 
     this.range = this.doc.querySelector('#range');
     this.color = this.doc.querySelector('#color');

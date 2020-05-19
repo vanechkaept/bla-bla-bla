@@ -9,7 +9,7 @@ style='margin-top: 15px; padding-bottom: 10px; background-color: white;'>
 </div>
 <canvas></canvas>
 
-<mat-slider id='range' min='1' max='4' step='1' [(ngModel)]="value" ></mat-slider>
+<mat-slider id='range' min='1' max='4' step='1' [(ngModel)]="this.value" ></mat-slider>
 <!-- {{this.rangeChange$ | async}} -->
 {{this.value}}
 

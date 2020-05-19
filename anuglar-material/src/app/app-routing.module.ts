@@ -18,7 +18,7 @@ import { OrganaizerComponent } from './components/organaizer/organaizer.componen
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'submarine', component: SubmarineComponent},
+  { path: 'submarine', component: SubmarineComponent, canDeactivate: [AuthGuard]},
   { path: 'login', component: LogginComponent},
   { path: 'calendar', component: OrganaizerComponent},
   { path: 'game',

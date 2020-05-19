@@ -1,1 +1,18 @@
-<p>calendar works!</p>
+
+
+  <mat-grid-list cols="7" rowHeight="100px" style="margin: 10px auto 30px auto" >
+    <mat-grid-tile
+    class='calendar__block'
+    *ngFor="let day of cl;"
+    [class.now]="day.now === true"
+    [class.selected]='day.selected === true'
+    [class.disabled]='day.disabled === true'
+    (click)='selectDay(day)'
+    >
+      {{day.value | moment__pipe:'D'}}
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+

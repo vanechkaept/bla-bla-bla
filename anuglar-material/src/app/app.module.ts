@@ -1,3 +1,4 @@
+import { MomentPipe } from './shared/pipes/moment.pipe';
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
@@ -22,6 +23,7 @@ import { OrganaizerComponent } from './components/organaizer/organaizer.componen
 import { OrgSelectorComponent } from './components/organaizer/org-selector/org-selector.component';
 import { OrgOrganaizerComponent } from './components/organaizer/org-organaizer/org-organaizer.component';
 import { CalendarComponent } from './components/organaizer/calendar/calendar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -45,6 +47,7 @@ import { CalendarComponent } from './components/organaizer/calendar/calendar.com
     CalendarComponent,
     OrgSelectorComponent,
     OrgOrganaizerComponent,
+    MomentPipe
 
   ],
   entryComponents: [DialogComponent],
@@ -55,6 +58,7 @@ import { CalendarComponent } from './components/organaizer/calendar/calendar.com
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule
 
   ],
   bootstrap: [AppComponent]
