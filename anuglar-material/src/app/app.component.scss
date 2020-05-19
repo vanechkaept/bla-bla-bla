@@ -1,12 +1,41 @@
 
 
 
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.nav-item{
+
+  &:hover{
+    cursor: pointer;
+  }
+
+}
+
+.nav-link{
+  color: #a9a9a9;
+  font-weight: 500;
+
+  &.active{
+    color: #828282;
+    font-weight: 500;
+  }
+}
 
 
 
-.navbar{
-  justify-content: space-between;
-  line-height: 65px;
+
+
+
+.nav__a{
+  border-bottom: 1px solid red;
+  padding: 8px 0px;
+  margin: 0 8px;
 }
 
 
@@ -46,6 +75,27 @@ mat-grid-tile{
   background-color: khaki;
   // border: 5px solid white;
 }
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(201, 201, 201);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(175, 175, 175);
+}
+
+
+
 
 
 

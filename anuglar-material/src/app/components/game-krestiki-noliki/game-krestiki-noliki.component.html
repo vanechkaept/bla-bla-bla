@@ -1,0 +1,48 @@
+<div class='game'>
+
+  <div class="row" style='height: 100%;'>
+    <div class="col-8" style='position: relative;'>
+      <div class="grid">
+        <div class='general-blocks' (click)='onClick(0)'></div>
+        <div class='general-blocks' (click)='onClick(1)'></div>
+        <div class='general-blocks' (click)='onClick(2)'></div>
+        <div class='general-blocks' (click)='onClick(3)'></div>
+        <div class='general-blocks' (click)='onClick(4)'></div>
+        <div class='general-blocks' (click)='onClick(5)'></div>
+        <div class='general-blocks' (click)='onClick(6)'></div>
+        <div class='general-blocks' (click)='onClick(7)'></div>
+        <div class='general-blocks' (click)='onClick(8)'></div>
+      </div>
+    </div>
+    <div class="col-4" style='position: relative;'>
+      <div class="grid__result">
+        <div class="result-block"></div>
+        <div class="result-block">Победы</div>
+        <div class="result-block">Крестики</div>
+        <div class="result-block"> {{winCountK}} </div>
+        <div class="result-block">Нолики</div>
+        <div class="result-block"> {{winCountO}} </div>
+        <div class="result-block" >
+          <!-- <form [formGroup]='form'>
+            <mat-form-field class="example-full-width" >
+              <mat-label>Favorite food</mat-label>
+              <input matInput formControlName='Food'>
+            </mat-form-field>
+
+          </form> -->
+          <button id='btn' mat-button  >
+            Click
+          </button>
+        </div>
+        <div class="result-block"
+        style='border-top: 1px solid rgba(0, 0, 0, 0.2); color: rgba(0, 0, 0, 0.2);  '
+        >
+         <!-- {{gameCount}} -->
+         {{ this.readInput$ | async }}
+         </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

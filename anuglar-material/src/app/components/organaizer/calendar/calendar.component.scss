@@ -1,0 +1,34 @@
+:root{
+  --primary-color: #dc3545;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+
+}
+
+.calendar__block{
+  //  border: 0px solid black;
+  background-color: var(--dark-color);
+  background-color: rgb(243, 243, 243) ;
+  transition: .3s;
+  cursor: pointer;
+
+
+  &.now{
+    background-color: rgba(0, 202, 0, 0.1);
+  }
+
+  &.disabled{
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &.selected{
+    border: 3px solid rgba(0, 202, 0, 0.4);
+
+  }
+
+  &:hover{
+    background-color: rgb(235, 235, 235) ;
+  }
+}
+
+

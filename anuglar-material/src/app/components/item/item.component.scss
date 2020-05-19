@@ -1,0 +1,100 @@
+
+.badUser{
+  border-left: 2px solid #c00000;
+  background-color: #ffebeb;
+}
+.badUser__text{
+  color: #810000;
+}
+
+.greateUser{
+  border-left: 2px solid #09b600;
+  background-color: #e1ffdf;
+}
+.greateUser__text{
+  color: #079100;
+}
+
+.item__subbig{
+  color:rgb(94, 95, 95);
+  font-style: 1.5rem;
+  margin-top: -10px ;
+  font-weight: 300;
+}
+.general__text{
+  margin: 10px;
+}
+
+.text{
+  &:after{
+    content: '"'
+  }
+  &::before{
+    content: '- "'
+  }
+}
+
+.user-header-image{
+  // background-image: url('https://lamcdn.net/lookatme.ru/post-cover/YTs4AdwURuPWdki4OJW8jQ-default.jpg');
+  background-size: cover;
+  background-position: center;
+
+  &.mat-card-avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+}
+
+
+
+
+
+.user__to__top{
+  position: absolute;
+  top: 62px;
+  left: 0;
+  transition: .5s;
+
+  height: calc(100vh - 62px) ;
+  width: 100px;
+
+  &:hover{
+    background-color: rgba(94, 95, 95, 0.06);
+  }
+
+  &:hover .btn__arrow{
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+}
+
+.btn__to__top{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.btn__arrow{
+  transition: .5s;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

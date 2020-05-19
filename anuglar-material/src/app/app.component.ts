@@ -1,11 +1,13 @@
-import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
 
+import {Component, OnInit, Input, Output} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {Observable} from 'rxjs';
+import {startWith, map} from 'rxjs/operators';
 
-
-
+export interface StateGroup {
+  letter: string;
+  names: string[];
+}
 
 
 @Component({
@@ -14,110 +16,20 @@ import {ErrorStateMatcher} from '@angular/material/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'angular-material';
 
-  startDate = new Date();
+  ng = 'Angular';
+  result = '';
 
-
-  toggleButton = true;
-  todo: boolean;
-  inputText = 'this new ';
-  notif = 0;
-  spinner = 20;
-  tabRef: string | number;
-  opened = true;
-  selected: any;
-
-
-  selectedList = [
-    {value: 'dog'},
-    {value: 'cat'},
-    {value: 'mouse'},
-  ];
-
-  selectedNum: number;
-  FirstName = new FormControl({value: '', disabled: false},
-    [Validators.required, Validators.maxLength(7)]);
-
-
-  minDate = new Date();
-
-  dateFilter = date => {
-    const day = date.getDay();
-    return day !== 0 && day !== 6 ;
-  }
-  // form = new FormGroup({
-  //   emailFormControl : new FormControl({value: '', disabled: false},
-  //     [Validators.required, Validators.email]),
-  //   emailFormControlSecond: new FormControl({value: '', disabled: false},
-  //     [Validators.required, Validators.max(999), Validators.min(10)])
-  // });
-  // form = new FormGroup({
-  //   emailFormControl: new FormControl({value: '', disabled: false}, [Validators.required ,Validators.email]),
-
-  // });
-  // emailFormControl = new FormControl( 'sd', [Validators.required,Validators.email]);
-
-
-
-  constructor(private snackBar: MatSnackBar) {}
-
-
-  openSnackBar(message, action) {
-    const snackBarRef = this.snackBar.open(message, action, {duration: 2000});
-    // this.snackBar.open(message, action);
-    snackBarRef.afterDismissed().subscribe(() => {
-      console.log('The snackbar was dismiss');
-    });
-    snackBarRef.onAction().subscribe(() => {
-      console.log('The snackbar was Triggere');
-    });
+  upCase(st: string): void {
+    this.result = 'This is the app component. I received a string \'' + st + '\' from the hello component'
+    + ' and I capitalize it here ' + st.toUpperCase();
   }
 
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.toggleButton = true;
-      console.log(this.todo);
+  constructor(private _formBuilder: FormBuilder) {}
 
-    }, 1000 );
-
-
+  ngOnInit() {
 
   }
-
-
-  add() {
-    this.spinner += 10;
-    if (this.spinner > 100 ) {
-      this.spinner = 0;
-    }
-  }
-
-  tabClick(tabRef) {
-    console.log(tabRef.selectedIndex);
-    this.tabRef = tabRef.selectedIndex;
-    console.log(this.tabRef);
-  }
-
-
-  create(selected) {
-     switch (selected) {
-       case 'dog': {this.selectedNum = 1; break; }
-       case 'cat': {this.selectedNum = 2; break; }
-       case 'mouse': {this.selectedNum = 3; break; }
-       default: break;
-     }
-
-
-  }
-
-
-
-
-
-
-
-
 
 
 

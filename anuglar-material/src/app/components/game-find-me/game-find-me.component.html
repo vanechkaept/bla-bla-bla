@@ -1,0 +1,41 @@
+
+<div class='game'>
+
+  <div class="main__block row">
+    <div class='countTry'>
+      <button mat-icon-button>
+        {{this.tryingOpenCount}}
+      </button>
+    </div>
+
+    <div class='refresh'>
+      <button mat-icon-button (click)='refresh()'>
+        <i class="material-icons">refresh</i>
+      </button>
+    </div>
+
+  </div>
+
+
+  <div class="grid">
+    <button class='card-block'
+    *ngFor='let card of this.cards'
+    (click)='openCard(card)'
+    [style.transform]="card.active ? 'rotateY(180deg)' : 'none' "
+    [disabled]='card.active'
+    [disabled]='this.choseCount !== 1 && this.choseCount !== 0 '
+    >
+      <div class="front">
+        <div class="front-info "> i </div>
+      </div>
+      <div class="back ">
+        <div class="back-info">
+            <i class="material-icons"> {{ this.createPicture(card.simbolNumber) }} </i>
+        </div>
+      </div>
+    </button >
+
+  </div>
+
+
+</div>

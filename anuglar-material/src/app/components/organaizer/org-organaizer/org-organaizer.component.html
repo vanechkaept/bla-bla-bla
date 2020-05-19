@@ -1,0 +1,128 @@
+
+
+
+<div class="container">
+  <mat-sidenav-container class='sidenav__container'>
+    <mat-sidenav-content class='sidenav__content'
+    style='transition: .4s;'
+    [class.negative__padding]='this.openedSidenav !== false'
+    >
+      <h5 class='subbig' style='margin-top: 0;'>
+        Дата: {{this.dateService.date | async | moment__pipe:'DD.MM.YYYY'}}
+      </h5>
+
+      <div class='grid'>
+        <div>
+          <mat-accordion>
+            <ng-container *ngIf='tasks?.length > 0; else noTasks'>
+              <mat-expansion-panel
+              *ngFor='let task of this.tasks; let i = index'
+              [class.preferably__info]='task.important ==="2"'
+              [class.important__info]='task.important === "1"'
+              >
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{task.title}}
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    {{task.important === '1'? 'Важно' : 'В процессе' }}
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                {{task.text}}
+                <mat-action-row>
+                  <button mat-button
+                  style='color: rgb(204, 0, 0);'
+                  (click)="deleteMemo(task)"
+                  >
+                    Удалить
+                  </button>
+                </mat-action-row>
+              </mat-expansion-panel>
+            </ng-container>
+            <ng-template #noTasks>
+              <p class='no__tasks'> Пока тут нет задач ...</p>
+            </ng-template>
+          </mat-accordion>
+        </div>
+
+        <div >
+          <button mat-raised-button
+          class='btn__toggle'
+          (click)='this.openedSidenav = !this.openedSidenav'
+          [class.close]='this.openedSidenav !== false' >
+            {{this.openedSidenav === false? '+' : '&#9658;'}}
+          </button>
+        </div>
+
+      </div>  <!-- /grid   -->
+    </mat-sidenav-content>
+
+    <mat-sidenav
+    position='end'
+    mode="side"
+    style='background-color: transparent;'
+    [(opened)]='openedSidenav'
+    (closed)='openedSidenav===false'
+    (opened)='openedSidenav===true'>
+      <h5 class='subbig' style='padding: 10px 0 0 15px;'> Создайте задачу: </h5>
+      <form
+      style='padding:0; margin:0 '
+      [formGroup]='form'
+      (ngSubmit)='submit()' >
+        <div class="row" style='padding: 0; margin: 0;'>
+          <div class="col-5">
+            <mat-form-field
+            appearance="fill"
+            style='width: 100%; '>
+              <mat-label>Название события </mat-label>
+              <input formControlName='title' matInput >
+              <mat-error *ngIf="this.form.controls.title.errors && this.form.controls.title.touched">
+                Поле не может быть пустым
+              </mat-error>
+            </mat-form-field>
+
+            <mat-radio-group
+            formControlName='important'>
+              <mat-radio-button value=1>
+                Важно
+              </mat-radio-button>
+              <br>
+              <mat-radio-button value=2>
+                Желательно
+              </mat-radio-button>
+              <br>
+              <mat-radio-button value=3>
+                На фоне
+              </mat-radio-button>
+            </mat-radio-group>
+
+          </div>
+
+          <div class="col-7">
+
+            <mat-form-field appearance="fill" style='width: 100%'>
+              <mat-label>Описание</mat-label>
+              <textarea formControlName='text' matInput cdkTextareaAutosize style='min-height: 75px;'></textarea>
+            </mat-form-field>
+
+            <div class='block__right'>
+              <button mat-button class='second__btn' (click)='resetForm()'>Очистить</button>
+              <button mat-raised-button class='first__btn' >Добавить</button>
+            </div>
+
+          </div>
+        </div>
+
+      </form>
+
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+
+
+</div>
+
+
+
+
+

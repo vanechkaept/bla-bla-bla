@@ -1,0 +1,19 @@
+<div
+class="container"
+style='margin-top: 15px; padding-bottom: 10px; background-color: white;'>
+<div class="row">
+    <button mat-raised-button style='margin: 10px; '>Очистить</button>
+    <button mat-raised-button style='margin: 10px; '>Basic</button>
+
+
+</div>
+<canvas></canvas>
+
+<mat-slider id='range' min='1' max='4' step='1' [(ngModel)]="this.value" ></mat-slider>
+<!-- {{this.rangeChange$ | async}} -->
+{{this.value}}
+
+<br>
+<input type="color" id='color'>
+{{this.colorChange$  | async}}
+</div>
